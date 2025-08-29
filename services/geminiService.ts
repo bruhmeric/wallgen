@@ -1,4 +1,3 @@
-
 import { GoogleGenAI } from "@google/genai";
 import type { AspectRatio } from '../types';
 
@@ -42,14 +41,14 @@ export const generateWallpaper = async (prompt: string, aspectRatio: AspectRatio
             prompt: prompt,
             config: {
               numberOfImages: 1,
-              outputMimeType: 'image/jpeg',
+              outputMimeType: 'image/png',
               aspectRatio: aspectRatio,
             },
         });
 
         if (response.generatedImages && response.generatedImages.length > 0) {
             const base64ImageBytes: string = response.generatedImages[0].image.imageBytes;
-            return `data:image/jpeg;base64,${base64ImageBytes}`;
+            return `data:image/png;base64,${base64ImageBytes}`;
         } else {
             throw new Error("No image was generated.");
         }

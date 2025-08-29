@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { DownloadIcon, SparklesIcon } from './icons';
 
@@ -46,7 +45,7 @@ const ImageDisplay: React.FC<ImageDisplayProps> = ({ isLoading, loadingStep, enh
         </div>
         <a
           href={generatedImage}
-          download="ai-wallpaper.jpeg"
+          download="ai-wallpaper.png"
           className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-violet-600 rounded-full hover:bg-violet-700 transition-transform transform hover:scale-105 shadow-lg"
         >
           <DownloadIcon className="w-5 h-5" />

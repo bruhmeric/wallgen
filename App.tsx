@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import type { AspectRatio } from './types';
 import { enhancePrompt, generateWallpaper } from './services/geminiService';
@@ -102,9 +101,6 @@ const App: React.FC = () => {
             />
         </div>
       </main>
-      <footer className="text-center py-6 text-slate-500 text-sm">
-        <p>Powered by Google Gemini. Created with passion.</p>
-      </footer>
     </div>
   );
 };
